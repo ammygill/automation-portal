@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: eebuilder
+  description: just testing EE
+  tags:
+    - new
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/managed-by-location: github.com?repo=automation-portal&owner=ammygill
+    ansible.io/scm-provider: github
+    backstage.io/source-template: template:default/ansible-execution-environment-builder-start-from-scratch
+spec:
+  type: execution-environment
+  owner: user:default/admin
+  lifecycle: production
