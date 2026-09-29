@@ -38,12 +38,12 @@ on:
       ee_dir:
         description: "Directory containing the EE files (relative to repo root)"
         required: false
-        default: "eebuilder"
+        default: "eebuilder12"
         type: string
       ee_file_name:
         description: "EE definition file name"
         required: false
-        default: "eebuilder.yml"
+        default: "eebuilder12.yml"
         type: string
       ee_registry:
         description: "Container registry"
@@ -89,8 +89,8 @@ env:
   EE_IMAGE_NAME: ${{ inputs.ee_image_name || vars.EE_IMAGE_NAME || github.repository }}
   EE_REGISTRY_TLS_VERIFY: ${{ inputs.ee_registry_tls_verify || vars.EE_REGISTRY_TLS_VERIFY || 'true' }}
   # EE directory and file name (override via workflow_dispatch inputs or repository Variables)
-  EE_DIR: ${{ inputs.ee_dir || vars.EE_DIR || 'eebuilder' }}
-  EE_FILE_NAME: ${{ inputs.ee_file_name || vars.EE_FILE_NAME || 'eebuilder.yml' }}
+  EE_DIR: ${{ inputs.ee_dir || vars.EE_DIR || 'eebuilder12' }}
+  EE_FILE_NAME: ${{ inputs.ee_file_name || vars.EE_FILE_NAME || 'eebuilder12.yml' }}
   # Image build tag (override via workflow_dispatch input or repository Variable)
   EE_IMAGE_BUILD_TAG: ${{ inputs.ee_image_build_tag || vars.EE_IMAGE_BUILD_TAG || format('build-{0}', github.sha) }}
   # Base image age thresholds (in days) - annotations only, never blocks the build
